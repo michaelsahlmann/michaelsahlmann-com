@@ -24,13 +24,13 @@ Construido específicamente para sustituir el entorno WordPress anterior por una
 ## 🏛️ Estructura & Secciones
 
 1. **Header Flotante en Cápsula**: Barra de navegación flotante con `backdrop-blur`, acceso directo y menú móvil responsive.
-2. **Hero Section**: Titular contundente, propuesta de valor, indicador de disponibilidad en Asunción, Paraguay, fotografía oficial en escenario y barra de KPIs (`+9 Años`, `+493 Alumnos`, `50% Eficiencia`, `Vida Legendaria`).
+2. **Hero Section**: Titular contundente, propuesta de valor, indicador de disponibilidad en Alto Paraná, Paraguay, fotografía oficial en escenario y barra de KPIs (`+9 Años`, `+493 Alumnos`, `50% Eficiencia`, `Alto Rendimiento`).
 3. **Sobre Mí (Trayectoria & Filosofía)**: La historia de Michael, desde su sólida experiencia en el sector bancario financiero hasta su rol como pionero de IA empresarial en Paraguay.
 4. **Los 5 Pilares de la Metodología**:
    - `01. Optimización de Negocios & Procesos (Framework Linchpin)`
    - `02. Gestión Avanzada de Productividad & Foco (Brian Tracy & Deep Work)`
    - `03. Implementación Estratégica de Inteligencia Artificial (N8N & LLMs)`
-   - `04. Liderazgo & Mentalidad Empresarial Legendaria (El Ejecutor)`
+   - `04. Liderazgo & Mentalidad Empresarial de Élite (El Ejecutor)`
    - `05. Transformación de Equipos de Alto Rendimiento`
 5. **Evidencia Operativa**: Contraste analítico entre el modelo tradicional obsoleto (40 hrs de trabajo manual/semana) y el ecosistema optimizado con IA (20 hrs liberadas), desglosando métricas en PYMES paraguayas.
 6. **Calculadora Interactiva de ROI**: Herramienta interactiva en tiempo real donde el empresario ajusta su tamaño de equipo, horas manuales y costo laboral para obtener horas recuperadas y ahorro proyectado en USD. Incluye botón directo con mensaje preconfigurado para WhatsApp.
