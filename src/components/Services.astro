@@ -1,0 +1,133 @@
+---
+const services = [
+  {
+    tag: "CONSULTORÍA PRIVADA",
+    title: "Transformación con IA & Reingeniería Operativa",
+    desc: "Inmersión exhaustiva en tus procesos de negocio para identificar fricciones, diseñar una arquitectura tecnológica automatizada y desplegar herramientas que multiplican la capacidad de tu equipo.",
+    features: [
+      "Diagnóstico operativo de cuellos de botella",
+      "Arquitectura de flujos automatizados con N8N y APIs",
+      "Despliegue de asistentes inteligentes entrenados con datos de tu empresa",
+      "Medición de KPI de reducción de tiempo y aumento de margen"
+    ],
+    ideal: "Empresas en crecimiento que buscan multiplicar su facturación sin triplicar sus costos fijos.",
+    cta: "Solicitar Diagnóstico"
+  },
+  {
+    tag: "KEYNOTES & EVENTOS",
+    title: "Conferencias de Alto Impacto & Dinamismo",
+    desc: "Charlas magistrales caracterizadas por una energía contagiosa, rigor estratégico y una capacidad única de traducir la complejidad tecnológica en planes de acción inmediatos para la audiencia.",
+    features: [
+      "Keynote: 'El Fin de la Fricción: Liderazgo en la Era de la IA'",
+      "Keynote: 'Paraguay puede estar atrasado. Vos no.'",
+      "Keynote: 'Vida Legendaria: Productividad Extrema sin Agotamiento'",
+      "Formato dinámico con casos reales y participación interactiva"
+    ],
+    ideal: "Congresos corporativos, cámaras empresariales, cumbres directivas y convenciones anuales.",
+    cta: "Cotizar Conferencia"
+  },
+  {
+    tag: "CAPACITACIÓN EQUIPOS",
+    title: "Entrenamiento Empresarial In-Company",
+    desc: "Talleres prácticos de inmersión donde ejecutivos, directores y colaboradores aprenden haciendo. No es teoría de laboratorio: el equipo finaliza con automatizaciones activas y nuevos hábitos de ejecución.",
+    features: [
+      "Workshops de prompting avanzado y asistentes especializados",
+      "Metodología de Deep Work y eliminación de distracciones laborales",
+      "Creación de plantillas y flujos de trabajo internos",
+      "Certificación interna en adopción de herramientas de productividad"
+    ],
+    ideal: "Organizaciones que quieren que su capital humano domine la IA antes que su competencia.",
+    cta: "Diseñar Taller a Medida"
+  },
+  {
+    tag: "ALTO RENDIMIENTO",
+    title: "Mentoría 1 a 1 para Dueños & Directores",
+    desc: "Acompañamiento estratégico confidencial para líderes que enfrentan el desafío de escalar su empresa mientras construyen una vida con plenitud, salud y claridad de pensamiento.",
+    features: [
+      "Sesiones estratégicas quincenales orientadas a resultados",
+      "Revisión de toma de decisiones, contratación clave y delegación",
+      "Alineación entre objetivos financieros y vida personal (Vida Legendaria)",
+      "Acceso directo y prioritario vía canal privado"
+    ],
+    ideal: "Fundadores, accionistas y ejecutivos de alto calibre.",
+    cta: "Postular a Mentoría"
+  }
+];
+---
+
+<section id="servicios" class="py-28 bg-[#050505] relative overflow-hidden border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+    
+    <div class="max-w-3xl mb-16">
+      <span class="font-code text-xs text-[#F26101] tracking-[0.2em] uppercase font-bold block mb-3">
+        Formatos de Colaboración
+      </span>
+      <h2 class="font-display text-[clamp(2.2rem,5vw,3.6rem)] font-light leading-[1.08] text-white mb-6">
+        Soluciones Estratégicas para <br />
+        <span class="italic text-[#F26101]">Líderes y Organizaciones.</span>
+      </h2>
+      <p class="text-sm sm:text-base text-[#D6D6DC] leading-relaxed font-light">
+        Desde conferencias masivas hasta implementaciones directas de arquitectura algorítmica. Diseñado para transformar la forma en que operas y decides.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid md:grid-cols-2 gap-8">
+      {services.map((service, index) => (
+        <div class="bg-[#0A0D14] border border-white/10 rounded-3xl p-8 sm:p-10 flex flex-col justify-between hover:border-[#F26101]/50 transition-all duration-300 relative group overflow-hidden">
+          
+          <!-- Subtle corner accent -->
+          <div class="absolute -top-12 -right-12 w-28 h-28 bg-[#F26101]/10 rounded-full blur-xl group-hover:scale-150 transition-transform"></div>
+
+          <div>
+            <!-- Tag -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-code text-[11px] text-[#F26101] tracking-[0.2em] uppercase font-bold">
+                {service.tag}
+              </span>
+              <span class="font-code text-[10px] text-white/30">0{index + 1}</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="font-display text-2xl sm:text-3xl text-white font-light mb-4 leading-tight">
+              {service.title}
+            </h3>
+
+            <!-- Description -->
+            <p class="text-xs sm:text-sm text-[#D6D6DC]/80 font-light mb-8 leading-relaxed">
+              {service.desc}
+            </p>
+
+            <!-- Features -->
+            <div class="space-y-3 mb-8 pt-6 border-t border-white/5">
+              <span class="font-code text-[10px] text-white/50 uppercase tracking-widest block mb-2">Incluye:</span>
+              {service.features.map(f => (
+                <div class="flex items-start gap-3 font-body text-xs sm:text-sm text-[#D6D6DC]">
+                  <span class="text-[#F26101] font-bold mt-0.5">&bull;</span>
+                  <span>{f}</span>
+                </div>
+              ))}
+            </div>
+
+            <!-- Ideal For -->
+            <div class="bg-white/[0.03] p-4 rounded-xl border border-white/5 mb-8">
+              <span class="font-code text-[10px] text-[#D9E8F5]/60 uppercase tracking-widest block mb-1">Para quién es:</span>
+              <p class="text-xs text-white/90 font-light leading-relaxed">{service.ideal}</p>
+            </div>
+          </div>
+
+          <!-- Bottom CTA -->
+          <a
+            href="#contacto"
+            class="inline-flex items-center justify-between w-full px-6 py-4 rounded-full text-xs font-bold tracking-[0.16em] uppercase bg-white/5 text-white border border-white/15 hover:bg-[#F26101] hover:border-[#F26101] transition-all duration-300 group-hover:border-white/30"
+          >
+            <span>{service.cta}</span>
+            <span class="text-[#F26101] group-hover:text-white group-hover:translate-x-1 transition-all">&rarr;</span>
+          </a>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

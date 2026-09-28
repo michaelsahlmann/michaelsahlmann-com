@@ -1,0 +1,113 @@
+---
+---
+
+<header class="fixed top-4 inset-x-4 max-w-7xl mx-auto z-50 transition-all duration-300">
+  <div
+    id="navbar-capsule"
+    class="bg-[#050505]/85 border border-white/10 backdrop-blur-xl rounded-full px-5 sm:px-8 py-3.5 flex justify-between items-center shadow-2xl transition-all duration-300"
+  >
+    <!-- Brand identity -->
+    <a href="#" class="flex items-center gap-3 group">
+      <div class="w-8 h-8 rounded-full bg-white/5 border border-white/15 flex items-center justify-center group-hover:border-[#F26101] transition-colors overflow-hidden p-1.5">
+        <svg class="w-full h-full fill-white group-hover:fill-[#F26101] transition-colors" viewBox="0 0 1024 1024">
+          <path d="M8195 6824 c-96 -183 -276 -318 -498 -376 -78 -20 -113 -21 -797 -28 -782 -8 -758 -6 -954 -71 -284 -95 -549 -295 -713 -539 l-30 -45 133 -270 c73 -148 135 -263 138 -255 2 8 12 41 21 74 51 183 184 370 350 494 131 97 289 154 473 172 59 5 344 10 634 10 424 0 540 3 596 15 313 65 578 326 661 650 18 73 40 245 30 245 -2 0 -22 -34 -44 -76z" transform="translate(0,1024) scale(0.1,-0.1)"></path>
+          <path d="M2012 6805 c30 -341 233 -629 531 -753 144 -61 163 -62 775 -62 327 0 592 -4 641 -10 283 -36 529 -193 696 -444 64 -98 90 -150 246 -488 235 -511 304 -625 493 -814 272 -271 563 -402 931 -420 230 -12 422 32 645 147 362 187 598 497 687 901 25 117 25 409 0 526 -34 153 -93 298 -172 425 l-37 57 -319 0 c-175 0 -319 -4 -319 -8 0 -5 23 -23 51 -41 225 -147 370 -418 370 -697 1 -401 -259 -742 -647 -845 -95 -25 -286 -31 -379 -10 -208 45 -408 168 -544 334 -86 103 -141 201 -264 467 -281 609 -361 745 -546 930 -173 172 -345 281 -551 349 -195 64 -179 63 -955 71 -771 8 -762 7 -916 67 -91 35 -185 98 -261 173 -59 59 -134 167 -144 207 -13 51 -19 18 -12 -62z" transform="translate(0,1024) scale(0.1,-0.1)"></path>
+        </svg>
+      </div>
+      <div>
+        <span class="font-display tracking-[0.12em] text-sm sm:text-base uppercase text-white font-normal block leading-tight">Michael Sahlmann</span>
+        <span class="font-code text-[9px] text-[#F26101] tracking-widest hidden sm:block uppercase">Negocios &bull; IA &bull; Foco</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <nav class="hidden lg:flex items-center gap-7 text-xs font-medium tracking-wider text-neutral-300">
+      <a href="#sobre-mi" class="hover:text-white hover:text-[#F26101] transition-colors py-1">Sobre Mí</a>
+      <a href="#pilares" class="hover:text-white hover:text-[#F26101] transition-colors py-1">5 Pilares</a>
+      <a href="#evidencia" class="hover:text-white hover:text-[#F26101] transition-colors py-1">Evidencia</a>
+      <a href="#calculadora" class="hover:text-white hover:text-[#F26101] transition-colors py-1">Calculadora ROI</a>
+      <a href="#servicios" class="hover:text-white hover:text-[#F26101] transition-colors py-1">Servicios</a>
+      <a href="#contacto" class="hover:text-white hover:text-[#F26101] transition-colors py-1">Contacto</a>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="flex items-center gap-3">
+      <div class="hidden xl:flex items-center gap-2 font-code text-[10px] text-white/50 border border-white/10 px-3 py-1.5 rounded-full">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>SYS_ONLINE</span>
+      </div>
+
+      <a
+        href="#contacto"
+        class="text-[11px] font-bold tracking-[0.16em] uppercase px-5 sm:px-6 py-2.5 bg-white text-black hover:bg-[#F26101] hover:text-white transition-all duration-300 rounded-full shadow-lg hover:shadow-[#F26101]/25 hover:scale-[1.02] active:scale-[0.98]"
+      >
+        Agendar Sesión
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-toggle"
+        aria-label="Abrir menú"
+        class="lg:hidden w-9 h-9 rounded-full bg-white/5 border border-white/15 flex items-center justify-center text-white hover:border-[#F26101] transition-colors"
+      >
+        <svg id="hamburger-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg id="close-icon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Panel -->
+  <div
+    id="mobile-menu"
+    class="hidden lg:hidden mt-2 bg-[#0A0D14]/95 border border-white/15 backdrop-blur-2xl rounded-2xl p-6 shadow-2xl transition-all"
+  >
+    <div class="flex flex-col gap-4 text-sm tracking-wider">
+      <a href="#sobre-mi" class="mobile-nav-link text-neutral-200 hover:text-[#F26101] transition-colors py-2 border-b border-white/5">Sobre Mí</a>
+      <a href="#pilares" class="mobile-nav-link text-neutral-200 hover:text-[#F26101] transition-colors py-2 border-b border-white/5">5 Pilares de la Metodología</a>
+      <a href="#evidencia" class="mobile-nav-link text-neutral-200 hover:text-[#F26101] transition-colors py-2 border-b border-white/5">Evidencia Operativa</a>
+      <a href="#calculadora" class="mobile-nav-link text-neutral-200 hover:text-[#F26101] transition-colors py-2 border-b border-white/5">Calculadora ROI</a>
+      <a href="#servicios" class="mobile-nav-link text-neutral-200 hover:text-[#F26101] transition-colors py-2 border-b border-white/5">Servicios & Formaciones</a>
+      <a href="#contacto" class="mobile-nav-link text-neutral-200 hover:text-[#F26101] transition-colors py-2">Contacto & Agenda Directa</a>
+    </div>
+
+    <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between font-code text-[11px] text-neutral-400">
+      <span>ASUNCIÓN, PARAGUAY</span>
+      <span class="text-[#F26101] font-semibold">VIDA LEGENDARIA</span>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+  if (toggleBtn && mobileMenu) {
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      if (isOpen) {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      }
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+  }
+</script>

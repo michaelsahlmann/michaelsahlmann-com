@@ -1,0 +1,16 @@
+{
+  "name": "michael-sahlmann-portfolio",
+  "version": "1.0.0",
+  "description": "Sitio web oficial de Michael Sahlmann - Experto en Negocios, Productividad e Inteligencia Artificial",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.5",
+    "tailwindcss": "^4.3.3"
+  }
+}

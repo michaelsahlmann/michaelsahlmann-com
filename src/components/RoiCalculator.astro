@@ -1,0 +1,213 @@
+---
+---
+
+<section id="calculadora" class="py-28 bg-[#07090E] relative overflow-hidden border-t border-white/10">
+  <!-- Glow background -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] volumetric-orange opacity-25 pointer-events-none -z-10"></div>
+
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+    
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <span class="font-code text-xs text-[#F26101] tracking-[0.2em] uppercase font-bold block mb-3">
+        Simulador Interactivo de Impacto
+      </span>
+      <h2 class="font-display text-[clamp(2.2rem,5vw,3.6rem)] font-light leading-[1.08] text-white mb-6">
+        Calcula el Retorno de <br />
+        <span class="italic text-[#F26101]">Automatización & IA en tu Negocio.</span>
+      </h2>
+      <p class="text-sm sm:text-base text-[#D6D6DC] leading-relaxed font-light">
+        Mide con precisión cuántas horas productivas y capital económico está perdiendo tu organización en procesos manuales que un sistema inteligente puede resolver hoy mismo.
+      </p>
+    </div>
+
+    <!-- Calculator Box -->
+    <div class="max-w-4xl mx-auto bg-[#0A0D14] border border-white/15 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur-2xl">
+      
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Controls Column -->
+        <div class="lg:col-span-6 space-y-8">
+          
+          <!-- Slider 1: Team Size -->
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <label for="slider-team" class="font-code text-xs text-white uppercase tracking-wider font-semibold">
+                Colaboradores Operativos / Admin
+              </label>
+              <span id="label-team" class="font-display text-xl text-[#F26101] font-bold">8 personas</span>
+            </div>
+            <input
+              type="range"
+              id="slider-team"
+              min="1"
+              max="50"
+              value="8"
+              class="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-[#F26101]"
+            />
+            <div class="flex justify-between text-[10px] font-code text-white/40 mt-1">
+              <span>1 persona</span>
+              <span>25 personas</span>
+              <span>50+ personas</span>
+            </div>
+          </div>
+
+          <!-- Slider 2: Hours wasted per week per person -->
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <label for="slider-hours" class="font-code text-xs text-white uppercase tracking-wider font-semibold">
+                Horas / semana en tareas repetitivas
+              </label>
+              <span id="label-hours" class="font-display text-xl text-[#F26101] font-bold">10 hrs/semana</span>
+            </div>
+            <input
+              type="range"
+              id="slider-hours"
+              min="2"
+              max="25"
+              value="10"
+              class="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-[#F26101]"
+            />
+            <div class="flex justify-between text-[10px] font-code text-white/40 mt-1">
+              <span>2 hrs (mínimo)</span>
+              <span>12 hrs</span>
+              <span>25 hrs (crítico)</span>
+            </div>
+          </div>
+
+          <!-- Slider 3: Hourly Rate (USD) -->
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <label for="slider-rate" class="font-code text-xs text-white uppercase tracking-wider font-semibold">
+                Costo Promedio Hora Hombre (USD)
+              </label>
+              <span id="label-rate" class="font-display text-xl text-[#F26101] font-bold">$15 USD/hr</span>
+            </div>
+            <input
+              type="range"
+              id="slider-rate"
+              min="5"
+              max="80"
+              value="15"
+              step="5"
+              class="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-[#F26101]"
+            />
+            <div class="flex justify-between text-[10px] font-code text-white/40 mt-1">
+              <span>$5 USD (~Gs. 40.000)</span>
+              <span>$40 USD</span>
+              <span>$80 USD</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Real-Time Output Display Card -->
+        <div class="lg:col-span-6 bg-gradient-to-b from-[#0F1520] to-[#07090E] p-7 sm:p-8 rounded-2xl border border-[#F26101]/30 flex flex-col justify-between shadow-xl relative overflow-hidden">
+          
+          <div class="absolute top-0 right-0 w-32 h-32 bg-[#F26101]/10 rounded-full blur-2xl"></div>
+
+          <div>
+            <span class="font-code text-[11px] text-[#F26101] uppercase tracking-widest font-bold block mb-4">
+              Resultados Estimados de Recuperación
+            </span>
+
+            <!-- Metric 1: Monthly hours recovered -->
+            <div class="mb-6 pb-6 border-b border-white/10">
+              <span class="font-code text-xs text-white/60 block mb-1">Horas Operativas Recuperadas / Mes:</span>
+              <div id="result-hours" class="font-display text-4xl sm:text-5xl text-white font-light tracking-tight">
+                160 hrs
+              </div>
+              <p class="text-[11px] text-white/50 font-code mt-1">Equivalente a <span id="result-fte" class="text-white font-bold">1 colaborador a tiempo completo</span> liberado de fricción.</p>
+            </div>
+
+            <!-- Metric 2: Monthly & Annual Capital Saved -->
+            <div class="space-y-4 mb-8">
+              <div class="flex justify-between items-baseline">
+                <span class="font-code text-xs text-white/70">Ahorro Mensual Estimado:</span>
+                <span id="result-monthly" class="font-display text-2xl text-[#F26101] font-bold">$2,400 USD</span>
+              </div>
+              <div class="flex justify-between items-baseline pt-2 border-t border-white/5">
+                <span class="font-code text-xs text-white/70">Impacto Anual Proyectado:</span>
+                <span id="result-yearly" class="font-display text-2xl text-emerald-400 font-bold">$28,800 USD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Action Button -->
+          <a
+            id="calc-cta"
+            href="#contacto"
+            class="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full text-xs font-black tracking-widest uppercase bg-white text-black hover:bg-[#F26101] hover:text-white transition-all duration-300 shadow-xl text-center group"
+          >
+            <span>Auditar mi Empresa con Michael</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-white/10 text-center font-code text-[11px] text-white/40">
+        * Estimación conservadora basada en un 50% de automatización de tareas redundantes mediante el Framework Linchpin de Michael Sahlmann.
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script is:inline>
+  const teamSlider = document.getElementById('slider-team');
+  const hoursSlider = document.getElementById('slider-hours');
+  const rateSlider = document.getElementById('slider-rate');
+
+  const labelTeam = document.getElementById('label-team');
+  const labelHours = document.getElementById('label-hours');
+  const labelRate = document.getElementById('label-rate');
+
+  const resultHours = document.getElementById('result-hours');
+  const resultFte = document.getElementById('result-fte');
+  const resultMonthly = document.getElementById('result-monthly');
+  const resultYearly = document.getElementById('result-yearly');
+  const calcCta = document.getElementById('calc-cta');
+
+  function updateRoi() {
+    if (!teamSlider || !hoursSlider || !rateSlider) return;
+
+    const team = parseInt(teamSlider.value, 10);
+    const hours = parseInt(hoursSlider.value, 10);
+    const rate = parseInt(rateSlider.value, 10);
+
+    labelTeam.textContent = `${team} ${team === 1 ? 'persona' : 'personas'}`;
+    labelHours.textContent = `${hours} hrs/semana`;
+    labelRate.textContent = `$${rate} USD/hr`;
+
+    // Monthly hours wasted = team * hours * 4
+    const totalWastedMonthly = team * hours * 4;
+    // 50% conservative recovery
+    const hoursRecovered = Math.round(totalWastedMonthly * 0.5);
+    const fteEquivalent = (hoursRecovered / 160).toFixed(1);
+
+    const monthlySavings = hoursRecovered * rate;
+    const yearlySavings = monthlySavings * 12;
+
+    resultHours.textContent = `${hoursRecovered.toLocaleString()} hrs`;
+    resultFte.textContent = `${fteEquivalent} colaboradores a tiempo completo`;
+    resultMonthly.textContent = `$${monthlySavings.toLocaleString()} USD`;
+    resultYearly.textContent = `$${yearlySavings.toLocaleString()} USD`;
+
+    // Update CTA link with pre-filled WhatsApp / Contact inquiry
+    const msg = encodeURIComponent(`Hola Michael, calculé en tu sitio que mi equipo de ${team} personas gasta ~${totalWastedMonthly} hrs/mes en tareas manuales. Me gustaría agendar una auditoría.`);
+    calcCta.setAttribute('href', `https://wa.me/595981000000?text=${msg}`);
+    calcCta.setAttribute('target', '_blank');
+    calcCta.setAttribute('rel', 'noopener noreferrer');
+  }
+
+  if (teamSlider && hoursSlider && rateSlider) {
+    teamSlider.addEventListener('input', updateRoi);
+    hoursSlider.addEventListener('input', updateRoi);
+    rateSlider.addEventListener('input', updateRoi);
+    updateRoi();
+  }
+</script>

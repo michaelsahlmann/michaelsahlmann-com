@@ -1,0 +1,74 @@
+---
+const testimonials = [
+  {
+    quote: "Michael desmanteló en menos de un mes cuellos de botella que nos costaban más de 40 horas operativas semanales. Su capacidad para conectar la Inteligencia Artificial con los números reales de la empresa es extraordinaria.",
+    author: "Ing. Rodrigo Benítez",
+    role: "Director de Operaciones & Logística",
+    location: "Asunción, Paraguay",
+    metric: "45% menos tiempo en procesos"
+  },
+  {
+    quote: "En sus conferencias no hay teoría vacía ni relleno motivacional. Te entrega la arquitectura exacta, la herramienta probada y la disciplina mental para salir a ejecutar al día siguiente. Una energía arrolladora.",
+    author: "Lic. Valeria Duarte",
+    role: "Gerente de Innovación y Talento",
+    location: "Ciudad del Este, Paraguay",
+    metric: "Capacitación a +80 ejecutivos"
+  },
+  {
+    quote: "Entré buscando cómo integrar ChatGPT y salí con una reingeniería completa bajo el Framework Linchpin. Hoy mi negocio atiende y califica prospectos 24/7 y yo finalmente recuperé mis fines de semana sin perder ventas.",
+    author: "Carlos Gómez Villalba",
+    role: "Fundador & CEO",
+    location: "Paraguay / Expansión Regional",
+    metric: "Atención automatizada 24/7"
+  }
+];
+---
+
+<section id="testimonios" class="py-28 bg-[#07090E] relative overflow-hidden border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+    
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <span class="font-code text-xs text-[#F26101] tracking-[0.2em] uppercase font-bold block mb-3">
+        Evidencia & Avales
+      </span>
+      <h2 class="font-display text-[clamp(2.2rem,5vw,3.6rem)] font-light leading-[1.08] text-white mb-6">
+        Más de 493 Líderes y <br />
+        <span class="italic text-[#F26101]">Organizaciones Transformadas.</span>
+      </h2>
+      <p class="text-sm sm:text-base text-[#D6D6DC] leading-relaxed font-light">
+        El impacto no se mide en promesas, sino en sistemas implementados, horas de vida recuperadas y crecimiento tangible.
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid md:grid-cols-3 gap-8">
+      {testimonials.map((t) => (
+        <div class="bg-[#0A0D14] border border-white/10 rounded-3xl p-8 flex flex-col justify-between hover:border-[#F26101]/40 transition-colors relative group">
+          
+          <div>
+            <!-- Metric Badge -->
+            <div class="mb-6">
+              <span class="font-code text-[10px] text-[#F26101] bg-[#F26101]/10 px-3 py-1 rounded-full border border-[#F26101]/20 font-bold uppercase tracking-wider">
+                {t.metric}
+              </span>
+            </div>
+
+            <!-- Quote text -->
+            <p class="font-body text-sm sm:text-base text-[#D6D6DC] font-light leading-relaxed mb-8 italic">
+              "{t.quote}"
+            </p>
+          </div>
+
+          <!-- Author Info -->
+          <div class="pt-6 border-t border-white/5">
+            <h4 class="font-display text-base text-white font-normal mb-1">{t.author}</h4>
+            <p class="text-xs text-white/60 font-light">{t.role}</p>
+            <span class="font-code text-[10px] text-[#F26101] block mt-1">{t.location}</span>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

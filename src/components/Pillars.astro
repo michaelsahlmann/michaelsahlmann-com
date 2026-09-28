@@ -1,0 +1,159 @@
+---
+const pillars = [
+  {
+    num: "01",
+    tag: "PROCESOS & ESCALA",
+    title: "Optimización de Negocios & Procesos",
+    desc: "Reingeniería operativa para erradicar cuellos de botella y diseñar negocios que crecen sin depender de la presencia constante del dueño.",
+    points: [
+      "Implementación del Framework Linchpin de continuidad empresarial",
+      "Mapeo y simplificación de flujos de trabajo críticos",
+      "Sistemas de delegación estructurada y documentación viva",
+      "Reducción de costos por ineficiencia operativa"
+    ]
+  },
+  {
+    num: "02",
+    tag: "MÁXIMO RENDIMIENTO",
+    title: "Gestión Avanzada de Productividad & Foco",
+    desc: "Sistemas de alta densidad cognitiva para proteger el tiempo de los líderes y canalizar la energía en actividades de alto apalancamiento.",
+    points: [
+      "Metodología ABC de priorización aplicada al ecosistema actual",
+      "Protocolos de Deep Work y eliminación de interrupciones",
+      "Rituales diarios de ejecución sin fricción ni ambigüedad",
+      "Balance sostenible entre resultados exponenciales y calidad de vida"
+    ]
+  },
+  {
+    num: "03",
+    tag: "TECNOLOGÍA DE VANGUARDIA",
+    title: "Implementación Estratégica de Inteligencia Artificial",
+    desc: "Dejar de consumir IA como juguete y convertirla en una ventaja competitiva conectada directamente al flujo de caja de la organización.",
+    points: [
+      "Automatización de procesos empresariales con N8N y Make",
+      "Despliegue de asistentes virtuales y agentes IA autónomos",
+      "Análisis predictivo de datos para toma de decisiones ejecutivas",
+      "Integración de LLMs en atención al cliente, marketing y ventas"
+    ]
+  },
+  {
+    num: "04",
+    tag: "MENTALIDAD DE ÉLITE",
+    title: "Liderazgo & Mentalidad Empresarial Legendaria",
+    desc: "Desarrollo del carácter y la disciplina del ejecutor implacable. Pasar del consumo pasivo a la producción constante de evidencia.",
+    points: [
+      "Transición del operador reactivo al estratega de alto nivel",
+      "Toma de decisiones basadas en datos e indicadores reales",
+      "Estándares de excelencia y superación de la mediocridad operativa",
+      "Construcción deliberada de una Vida Legendaria"
+    ]
+  },
+  {
+    num: "05",
+    tag: "CULTURA OPERATIVA",
+    title: "Transformación de Equipos de Alto Rendimiento",
+    desc: "Alineación de talento bajo objetivos compartidos, responsabilidad individual y adopción de herramientas tecnológicas avanzadas.",
+    points: [
+      "Cultura de entrega rápida y rendición de cuentas",
+      "Entrenamiento práctico del equipo en herramientas de IA",
+      "Reducción del micromanagement mediante sistemas claros",
+      "Aumento medible en velocidad de respuesta y satisfacción interna"
+    ]
+  }
+];
+---
+
+<section id="pilares" class="py-28 bg-[#07090E] relative overflow-hidden border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+    
+    <!-- Section Header -->
+    <div class="max-w-3xl mb-16">
+      <span class="font-code text-xs text-[#F26101] tracking-[0.2em] uppercase font-bold block mb-3">
+        La Metodología Probada
+      </span>
+      <h2 class="font-display text-[clamp(2.2rem,5vw,3.6rem)] font-light leading-[1.08] text-white mb-6">
+        Los 5 Pilares de la <br />
+        <span class="italic text-[#F26101]">Transformación Exponencial.</span>
+      </h2>
+      <p class="text-sm sm:text-base text-[#D6D6DC] leading-relaxed font-light">
+        Un método integral y probado para organizaciones que no aceptan la complacencia. Cada pilar refuerza al siguiente para generar resultados medibles con menos fricción.
+      </p>
+    </div>
+
+    <!-- Pillars Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {pillars.map((pillar, idx) => (
+        <div class={`bg-[#0A0D14] border border-white/10 rounded-3xl p-7 flex flex-col justify-between hover:border-[#F26101]/60 transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden ${idx === 2 ? 'lg:col-span-1 md:col-span-2' : ''}`}>
+          
+          <!-- Top Accent Light -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-[#F26101]/5 rounded-full blur-2xl group-hover:bg-[#F26101]/15 transition-all"></div>
+
+          <div>
+            <!-- Header bar of card -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-code text-xs font-black tracking-widest text-[#F26101] bg-[#F26101]/10 px-3 py-1 rounded-full border border-[#F26101]/20">
+                PILAR {pillar.num}
+              </span>
+              <span class="font-code text-[10px] text-white/40 tracking-[0.16em] uppercase">
+                {pillar.tag}
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="font-display text-xl sm:text-2xl text-white font-normal mb-4 group-hover:text-white transition-colors leading-tight">
+              {pillar.title}
+            </h3>
+
+            <!-- Description -->
+            <p class="text-xs sm:text-sm text-[#D6D6DC]/80 font-light mb-6 leading-relaxed">
+              {pillar.desc}
+            </p>
+
+            <!-- Key points checklist -->
+            <ul class="space-y-2.5 pt-4 border-t border-white/5 font-body text-xs text-[#D6D6DC]">
+              {pillar.points.map((point) => (
+                <li class="flex items-start gap-2.5">
+                  <span class="text-[#F26101] font-bold mt-0.5">&bull;</span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Bottom micro-indicator -->
+          <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between font-code text-[10px] text-white/40">
+            <span>IMPACTO OPERATIVO</span>
+            <span class="text-[#F26101] font-bold group-hover:translate-x-1 transition-transform">&rarr; APLICAR</span>
+          </div>
+
+        </div>
+      ))}
+
+      <!-- 6th Special Card: Framework Linchpin summary CTA -->
+      <div class="bg-gradient-to-br from-[#0F1520] to-[#0A0D14] border border-[#F26101]/40 rounded-3xl p-7 flex flex-col justify-between relative overflow-hidden group">
+        <div class="absolute -bottom-10 -right-10 w-44 h-44 bg-[#F26101]/20 rounded-full blur-3xl"></div>
+
+        <div>
+          <span class="font-code text-xs font-black tracking-widest text-[#F26101] uppercase block mb-4">
+            Ecosistema Integrado
+          </span>
+          <h3 class="font-display text-2xl text-white font-normal mb-4 leading-tight">
+            ¿Cómo se conectan estos 5 pilares en tu empresa?
+          </h3>
+          <p class="text-xs sm:text-sm text-[#D6D6DC] font-light leading-relaxed mb-6">
+            A través de una auditoría estratégica personalizada, identificamos exactamente qué pilares presentan mayores fugas de tiempo y dinero en tu operación actual.
+          </p>
+        </div>
+
+        <a
+          href="#contacto"
+          class="inline-flex items-center justify-center px-6 py-3.5 rounded-full text-xs font-black tracking-widest uppercase bg-[#F26101] text-white hover:bg-white hover:text-black transition-all duration-300 shadow-lg text-center"
+        >
+          Solicitar Auditoría de Pilares
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
