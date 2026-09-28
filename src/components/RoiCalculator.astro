@@ -197,11 +197,16 @@
     resultMonthly.textContent = `$${monthlySavings.toLocaleString()} USD`;
     resultYearly.textContent = `$${yearlySavings.toLocaleString()} USD`;
 
-    // Update CTA link with pre-filled WhatsApp / Contact inquiry
-    const msg = encodeURIComponent(`Hola Michael, calculé en tu sitio que mi equipo de ${team} personas gasta ~${totalWastedMonthly} hrs/mes en tareas manuales. Me gustaría agendar una auditoría.`);
-    calcCta.setAttribute('href', `https://wa.me/595981000000?text=${msg}`);
-    calcCta.setAttribute('target', '_blank');
-    calcCta.setAttribute('rel', 'noopener noreferrer');
+    // Connect CTA to contact form without WhatsApp
+    calcCta.setAttribute('href', '#contacto');
+    calcCta.removeAttribute('target');
+    calcCta.removeAttribute('rel');
+    calcCta.onclick = () => {
+      const msgArea = document.getElementById('message');
+      if (msgArea) {
+        msgArea.value = `Hola Michael, calculé que mi equipo de ${team} personas pierde ~${totalWastedMonthly} hrs/mes en tareas repetitivas. Deseo una consulta para evaluar soluciones de automatización e IA.`;
+      }
+    };
   }
 
   if (teamSlider && hoursSlider && rateSlider) {

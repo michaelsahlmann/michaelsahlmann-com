@@ -24,7 +24,7 @@ Construido específicamente para sustituir el entorno WordPress anterior por una
 ## 🏛️ Estructura & Secciones
 
 1. **Header Flotante en Cápsula**: Barra de navegación flotante con `backdrop-blur`, acceso directo y menú móvil responsive.
-2. **Hero Section**: Titular contundente, propuesta de valor, indicador de disponibilidad en Alto Paraná, Paraguay, fotografía oficial en escenario y barra de KPIs (`+9 Años`, `+493 Alumnos`, `50% Eficiencia`, `Alto Rendimiento`).
+2. **Hero Section**: Titular contundente, propuesta de valor, fotografía oficial en escenario y barra de KPIs (`+9 Años`, `+493 Alumnos`, `50% Eficiencia`, `Alto Rendimiento`).
 3. **Sobre Mí (Trayectoria & Filosofía)**: La historia de Michael, desde su sólida experiencia en el sector bancario financiero hasta su rol como pionero de IA empresarial en Paraguay.
 4. **Los 5 Pilares de la Metodología**:
    - `01. Optimización de Negocios & Procesos (Framework Linchpin)`
@@ -33,10 +33,10 @@ Construido específicamente para sustituir el entorno WordPress anterior por una
    - `04. Liderazgo & Mentalidad Empresarial de Élite (El Ejecutor)`
    - `05. Transformación de Equipos de Alto Rendimiento`
 5. **Evidencia Operativa**: Contraste analítico entre el modelo tradicional obsoleto (40 hrs de trabajo manual/semana) y el ecosistema optimizado con IA (20 hrs liberadas), desglosando métricas en PYMES paraguayas.
-6. **Calculadora Interactiva de ROI**: Herramienta interactiva en tiempo real donde el empresario ajusta su tamaño de equipo, horas manuales y costo laboral para obtener horas recuperadas y ahorro proyectado en USD. Incluye botón directo con mensaje preconfigurado para WhatsApp.
+6. **Calculadora Interactiva de ROI**: Herramienta interactiva en tiempo real donde el empresario ajusta su tamaño de equipo, horas manuales y costo laboral para obtener horas recuperadas y ahorro proyectado en USD. Conectada directamente al formulario.
 7. **Servicios & Soluciones**: 4 modalidades (Consultoría en IA, Conferencias Magistrales, Entrenamiento In-Company y Mentoría 1 a 1).
 8. **Testimonios & Social Proof**: Avales reales de directores y empresarios capacitados.
-9. **Contacto & Formulario**: Formulario estratégico con validación instantánea y enlace directo prioritario a WhatsApp.
+9. **Contacto & Formulario**: Formulario estratégico conectado al Webhook de n8n (`https://michaelsahlmann.app.n8n.cloud/webhook/b25e9e91-2f2c-4419-b39e-4a190c3ad404`) para captura automática de prospectos.
 10. **Footer Institucional**: Cita de marca (*"Paraguay puede estar atrasado. Vos no."*), enlaces y copyright.
 
 ---
