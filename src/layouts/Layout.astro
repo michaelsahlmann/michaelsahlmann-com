@@ -17,6 +17,8 @@ const {
   noindex = false
 } = Astro.props;
 
+const ogImageUrl = image.startsWith('http') ? image : new URL(image, canonical).href;
+
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -36,6 +38,12 @@ const structuredData = {
         "addressCountry": "Paraguay"
       },
       "description": "Líder en Paraguay en optimización de negocios, metodologías de productividad e integración estratégica de Inteligencia Artificial en organizaciones.",
+      "sameAs": [
+        "https://www.linkedin.com/in/michaelsahlmann",
+        "https://www.youtube.com/@michaelsahlmanndiaz",
+        "https://www.instagram.com/michaelsahlmann",
+        "https://twitter.com/michaelsahlmann"
+      ],
       "knowsAbout": [
         "Inteligencia Artificial para Negocios",
         "Automatización de Procesos con N8N",
@@ -66,15 +74,24 @@ const structuredData = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="author" content="Michael Sahlmann" />
     <link rel="canonical" href={canonical} />
-    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {noindex ? (
+      <meta name="robots" content="noindex, nofollow" />
+    ) : (
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    )}
 
-    <!-- Open Graph / Facebook / WhatsApp -->
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:secure_url" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
     <meta property="og:locale" content="es_PY" />
     <meta property="og:site_name" content="Michael Sahlmann" />
 
@@ -83,7 +100,8 @@ const structuredData = {
     <meta name="twitter:url" content={canonical} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:creator" content="@michaelsahlmann" />
 
     <!-- Favicon & Icons -->
     <link rel="icon" type="image/svg+xml" href="/images/varkentis-logo.svg" />
