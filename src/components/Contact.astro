@@ -109,6 +109,12 @@
             ></textarea>
           </div>
 
+          <!-- Anti-bot Honeypot (invisible to humans, trapped for bots) -->
+          <div class="hidden" style="display:none!important;" aria-hidden="true">
+            <label for="form_hp_check">Leave this field blank</label>
+            <input type="text" id="form_hp_check" name="form_hp_check" tabindex="-1" autocomplete="off" />
+          </div>
+
           <button
             type="submit"
             id="submit-btn"
@@ -147,12 +153,23 @@
   const errorMessage = document.getElementById('error-message');
 
   const WEBHOOK_URL = 'https://michaelsahlmann.app.n8n.cloud/webhook/b25e9e91-2f2c-4419-b39e-4a190c3ad404';
+  const pageLoadedAt = Date.now();
 
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       if (errorBox) errorBox.classList.add('hidden');
+
+      // 1. Honeypot check: If bot filled the hidden field, pretend success without calling n8n
+      const honeypotVal = document.getElementById('form_hp_check')?.value?.trim();
+      const elapsedMs = Date.now() - pageLoadedAt;
+      if (honeypotVal || elapsedMs < 2000) {
+        // Silent rejection: fake success to fool automated spambots
+        form.classList.add('hidden');
+        if (successBox) successBox.classList.remove('hidden');
+        return;
+      }
 
       const name = document.getElementById('name')?.value?.trim() || '';
       const email = document.getElementById('email')?.value?.trim() || '';

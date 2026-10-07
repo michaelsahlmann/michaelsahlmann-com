@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="404: Página no encontrada | Michael Sahlmann"
+  description="La página que buscas no existe o ha sido reubicada."
+  noindex={true}
+>
+  <main class="min-h-[80vh] flex flex-col items-center justify-center px-6 relative z-10 text-center py-24">
+    <!-- Volumetric light effect -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] volumetric-orange opacity-15 pointer-events-none -z-10"></div>
+
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-code text-[#F26101] uppercase tracking-wider mb-8">
+      <span>Error 404</span>
+      <span>•</span>
+      <span>Ruta no encontrada</span>
+    </div>
+
+    <h1 class="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-light text-white leading-tight mb-6">
+      Esta página no existe o <br />
+      <span class="italic text-[#F26101]">ha sido reubicada.</span>
+    </h1>
+
+    <p class="max-w-xl mx-auto text-base text-slate-300 font-normal leading-relaxed mb-10">
+      Si llegaste aquí desde un enlace antiguo, nuestro sitio web se actualizó recientemente. Puedes regresar a la página principal para conocer los servicios de consultoría, productividad e Inteligencia Artificial.
+    </p>
+
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-black font-code text-xs uppercase tracking-widest font-bold hover:bg-[#F26101] hover:text-white transition-all duration-300 shadow-xl group"
+      >
+        <span>Volver al inicio</span>
+        <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+      </a>
+
+      <a
+        href="/#contacto"
+        class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white/5 border border-white/15 text-white font-code text-xs uppercase tracking-widest font-bold hover:border-[#F26101] hover:text-[#F26101] transition-all duration-300"
+      >
+        <span>Contacto Directo</span>
+      </a>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

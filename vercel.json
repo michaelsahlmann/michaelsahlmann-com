@@ -2,6 +2,73 @@
   "framework": "astro",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/blog",
+      "destination": "https://blog.michaelsahlmann.com",
+      "permanent": true
+    },
+    {
+      "source": "/blog/(.*)",
+      "destination": "https://blog.michaelsahlmann.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/sobre-mi",
+      "destination": "/#sobre-mi",
+      "permanent": true
+    },
+    {
+      "source": "/acerca-de",
+      "destination": "/#sobre-mi",
+      "permanent": true
+    },
+    {
+      "source": "/contacto",
+      "destination": "/#contacto",
+      "permanent": true
+    },
+    {
+      "source": "/servicios",
+      "destination": "/#servicios",
+      "permanent": true
+    },
+    {
+      "source": "/testimonios",
+      "destination": "/#testimonios",
+      "permanent": true
+    },
+    {
+      "source": "/calculadora",
+      "destination": "/#calculadora",
+      "permanent": true
+    },
+    {
+      "source": "/pilares",
+      "destination": "/#pilares",
+      "permanent": true
+    },
+    {
+      "source": "/page-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap_index.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/wp-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/post-sitemap.xml",
+      "destination": "https://blog.michaelsahlmann.com/sitemap.xml",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/fonts/(.*)",
